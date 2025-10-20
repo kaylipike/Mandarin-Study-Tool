@@ -49,6 +49,7 @@ make
    
 ./MandarinStudyTool
 
+
 Follow the on-screen prompts to select a study mode.
 
 Press Enter to reveal answers and translations.
