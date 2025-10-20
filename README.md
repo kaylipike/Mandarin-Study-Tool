@@ -72,5 +72,18 @@ Key Concepts Demonstrated:
   - Expand vocabulary datasets and support multiple textbooks or levels.
   - Transition to a graphical user interface for enhanced usability.
 
+---
+
 ## Why This Project Matters
 This program demonstrates the ability to design and implement a practical, real-world tool using C++ fundamentals. It reflects careful object-oriented design for maintainability and scalability, practical data processing skills (parsing structured text files, and attention to user experience, even in a console-based program. This project is an excellent example of applying programming skills to solve educational challenges, making it both technically impressive and personally meaningful.
+
+---
+
+## Contact
+
+For questions, feedback, or collaboration inquiries, please contact:
+**Email:** [knpike@uvm.edu](mailto:knpike@uvm.edu)
+
+---
+
+**© 2025 Kayli Pike**
