@@ -6,15 +6,22 @@
 #define M2OEP_KNPIKE_WORD_H
 
 #include "Flashcard.h"
+#include <string>
 
 class Word : public Flashcard {
 private:
+    std::string chinese;
     std::string pinyin;
     std::string meaning;
 
 public:
-    Word(const std::string& character, const std::string& pinyin, const std::string& meaning);
-    void practice(); // Implement how to practice with this word
+    Word(const std::string& chinese, const std::string& pinyin, const std::string& meaning);
+
+    std::string getChinese() const;
+    std::string getPinyin() const;
+    std::string getMeaning() const;
+
+    virtual ~Word() {}
 };
 
 #endif //M2OEP_KNPIKE_WORD_H

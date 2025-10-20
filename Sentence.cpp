@@ -4,14 +4,13 @@
 
 #include "Sentence.h"
 
-// Constructor
-Sentence::Sentence(const std::string& chineseSentence, const std::string& englishSentence)
-        : Flashcard(chineseSentence, "", "") { // Call base class constructor, adapt as needed
-    this->englishSentence = englishSentence;
+Sentence::Sentence(const std::string& chinese, const std::string& english)
+        : Flashcard(), chinese(chinese), english(english) {}
+
+std::string Sentence::getChinese() const {
+    return chinese;
 }
 
-void Sentence::practice() {
-    std::cout << "Chinese Sentence: " << character << std::endl;
-    std::cout << "English Sentence: " << englishSentence << std::endl;
-    // Additional practice logic for Sentence
+std::string Sentence::getEnglish() const {
+    return english;
 }

@@ -4,24 +4,19 @@
 
 #include <string>
 #include <iostream>
+#include "Word.h"
 
-class Flashcard {
-protected:
-    std::string character; // Protected so derived classes can access it
-    std::string pinyin;
-    std::string meaning;
+Word::Word(const std::string& chinese, const std::string& pinyin, const std::string& meaning)
+        : Flashcard(), chinese(chinese), pinyin(pinyin), meaning(meaning) {}
 
-public:
-    // Constructor
-    Flashcard(const std::string& character, const std::string& pinyin, const std::string& meaning)
-            : character(character), pinyin(pinyin), meaning(meaning) {}
+std::string Word::getChinese() const {
+    return chinese;
+}
 
-    // Virtual practice function
-    virtual void practice() {
-        std::cout << "Character: " << character << std::endl;
-        std::cout << "Pinyin: " << pinyin << std::endl;
-        std::cout << "Meaning: " << meaning << std::endl;
-    }
+std::string Word::getPinyin() const {
+    return pinyin;
+}
 
-    virtual ~Flashcard() {} // Virtual destructor for polymorphism
-};
+std::string Word::getMeaning() const {
+    return meaning;
+}

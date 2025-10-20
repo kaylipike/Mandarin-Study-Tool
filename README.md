@@ -1,4 +1,4 @@
-# M2OEP-knpike
+# Mandarin Chinese Flashcards
 
 Kayli Pike
 

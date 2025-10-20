@@ -7,25 +7,47 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include "Word.h"
+#include "Sentence.h"
 
-void loadFlashcards(const std::string& filename, std::vector<Flashcard>& flashcards) {
+std::string trim(const std::string& s) {
+    auto start = s.find_first_not_of(" \t");
+    auto end = s.find_last_not_of(" \t");
+    if (start == std::string::npos) return "";
+    return s.substr(start, end - start + 1);
+}
+
+void loadFlashcards(const std::string& filename, std::vector<Flashcard*>& flashcards) {
     std::ifstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "Error opening file: " << filename << std::endl;
+        return;
+    }
+
     std::string line;
-
     while (std::getline(file, line)) {
-        std::istringstream iss(line);
-        std::string character, pinyin, meaning, sentenceMandarin, sentenceEnglish;
+        if (line.empty()) continue;
 
-        // Assuming your file format is:
-        // character pinyin meaning
-        // sentenceMandarin|sentenceEnglish
-        iss >> character >> pinyin >> meaning;
-        std::getline(file, line); // Get the sentence line
-        std::istringstream sentenceStream(line);
-        std::getline(sentenceStream, sentenceMandarin, '|'); // Assuming sentences are separated by '|'
-        std::getline(sentenceStream, sentenceEnglish);
+        std::vector<std::string> parts;
+        std::stringstream ss(line);
+        std::string part;
 
-        // Assuming Flashcard has a constructor that takes these arguments
-        flashcards.emplace_back(character, pinyin, meaning, sentenceMandarin, sentenceEnglish);
+        while (std::getline(ss, part, '|')) {
+            parts.push_back(trim(part));
+        }
+
+        if (parts.size() != 5) {
+            std::cerr << "Invalid line format: " << line << std::endl;
+            continue;
+        }
+
+        std::string chineseChar = parts[0];
+        std::string pinyin = parts[1];
+        std::string meaning = parts[2];
+        std::string sentenceChinese = parts[3];
+        std::string sentenceEnglish = parts[4];
+
+        flashcards.push_back(new Word(chineseChar, pinyin, meaning));
+        flashcards.push_back(new Sentence(sentenceChinese, sentenceEnglish));
     }
 }

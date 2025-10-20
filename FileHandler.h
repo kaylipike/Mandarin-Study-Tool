@@ -8,6 +8,6 @@
 #include <vector>
 #include "Flashcard.h"
 
-void loadFlashcards(const std::string& filename, std::vector<Flashcard>& flashcards);
+void loadFlashcards(const std::string& filename, std::vector<Flashcard*>& flashcards);
 
 #endif //M2OEP_KNPIKE_FILEHANDLER_H

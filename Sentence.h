@@ -9,11 +9,18 @@
 
 class Sentence : public Flashcard {
 private:
-    std::string englishSentence;
+    std::string chinese;
+    std::string english;
 
 public:
-    Sentence(const std::string& chineseSentence, const std::string& englishSentence);
-    void practice(); // Implement how to practice with this sentence
+    // Constructor
+    Sentence(const std::string& chinese, const std::string& english);
+
+    // Getters
+    std::string getChinese() const;
+    std::string getEnglish() const;
+
+    virtual ~Sentence() {}
 };
 
 #endif //M2OEP_KNPIKE_SENTENCE_H
