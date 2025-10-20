@@ -28,7 +28,6 @@ This C++ project is an interactive study tool for Mandarin Chinese. It helps use
 ## Installation & Usage
 
 1. **Clone the repository**
-```bash
 git clone https://github.com/kaylipike/MandarinStudyTool.git
 cd MandarinStudyTool
 2. **Build the project**
