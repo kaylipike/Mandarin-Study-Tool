@@ -50,7 +50,9 @@ make
 ./MandarinStudyTool
 
 Follow the on-screen prompts to select a study mode.
+
 Press Enter to reveal answers and translations.
+
 Note: Ensure the mandarin_vocab.txt file is in the working directory when running the program.
 
 ---
