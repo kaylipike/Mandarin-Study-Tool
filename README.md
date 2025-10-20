@@ -28,14 +28,17 @@ This C++ project is an interactive study tool for Mandarin Chinese. It helps use
 ## Installation & Usage
 
 1. **Clone the repository**
+```bash
    
 git clone https://github.com/kaylipike/MandarinStudyTool.git
 
 cd MandarinStudyTool
+```
 
 2. **Build the project**
    
 The project uses CMake for cross-platform compilation:
+```bash
 
 mkdir build
 
@@ -44,11 +47,13 @@ cd build
 cmake ..
 
 make
+```
 
 3. **Run the program**
+```bash
    
 ./MandarinStudyTool
-
+```
 
 Follow the on-screen prompts to select a study mode.
 
