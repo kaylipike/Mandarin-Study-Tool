@@ -17,7 +17,7 @@ This C++ project is an interactive study tool for Mandarin Chinese. It helps use
 
 ## Technical Highlights
 
-- **Language & Tools**: C++ (GNU++14), CLion, macOS  
+- **Language & Tools**: C++, CLion, macOS  
 - **OOP Concepts**: Polymorphism with a `Flashcard` base class and `Word`/`Sentence` derived classes.  
 - **Dynamic Memory Management**: Flashcards stored as pointers with proper cleanup.  
 - **File I/O & Parsing**: Reads structured text files and handles different delimiters.  
@@ -28,15 +28,25 @@ This C++ project is an interactive study tool for Mandarin Chinese. It helps use
 ## Installation & Usage
 
 1. **Clone the repository**
+   
 git clone https://github.com/kaylipike/MandarinStudyTool.git
+
 cd MandarinStudyTool
+
 2. **Build the project**
+   
 The project uses CMake for cross-platform compilation:
+
 mkdir build
+
 cd build
+
 cmake ..
+
 make
+
 3. **Run the program**
+   
 ./MandarinStudyTool
 
 Follow the on-screen prompts to select a study mode.
