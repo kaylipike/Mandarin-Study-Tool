@@ -1,21 +1,67 @@
-# Mandarin Chinese Flashcards
+# Mandarin Study Tool – Flashcard Program
 
-Kayli Pike
+## Overview
+This C++ project is an interactive study tool for Mandarin Chinese. It helps users learn some of the vocabulary and sentence structures from *3rd Year College Chinese* by John Jing-hua Yin and Diana Yiqing Sun. The program uses an object-oriented design to provide flashcards for words and sentences with multiple study modes.
 
-Summary: This program will assist with studying Mandarin Chinese by using the vocabulary and sentences in John Jing-hua Yin and Diana Yiqing Sun's 3rd Year College Chinese book. It will allow users to study with flashcard and choose whether this is based on the word, the meaning, or the pinyin pronounciation. It will also allow you to study sentences (in chinese and then their english meanings). This uses Has-A relationships withe flashcards having words and sentences. 
+---
 
+## Key Features
 
-Known Bugs: I am having issues with getting the program to compile because of initialization and just getting the flashcards to be set correctly. 
+- **Vocabulary Flashcards**: Chinese characters, pinyin, and English meaning.  
+- **Sentence Flashcards**: Mandarin sentences with English translations.  
+- **Custom Study Modes**: Review by Chinese character, English meaning, or pinyin.  
+- **Interactive Console Interface**: Press Enter to reveal answers.  
+- **Scalable & Extensible**: Easily add more words, sentences, or grammar exercises.
 
+---
 
-Future Work: Fix the errors so that it compiles, then make sure the program works as expected. I could then add more vocabulary and maybe add some sort of way to study different grammar structures. 
+## Technical Highlights
 
+- **Language & Tools**: C++ (GNU++14), CLion, macOS  
+- **OOP Concepts**: Polymorphism with a `Flashcard` base class and `Word`/`Sentence` derived classes.  
+- **Dynamic Memory Management**: Flashcards stored as pointers with proper cleanup.  
+- **File I/O & Parsing**: Reads structured text files and handles different delimiters.  
+- **User Experience**: Smooth, step-by-step interactive study flow.
 
-Citations:
-https://www.w3schools.com/cpp/
-https://cplusplus.com
-https://www.geeksforgeeks.org/cpp-pointers/
+---
 
+## Installation & Usage
 
-Grade I think I earned (with justification): 10 points for having a Has-A relationship that is used in the main program, 3 points for having poor file I/O, -25 because no video and some comments and commits over 3 days. I am hoping somehow I manage to get more than 0 points. 
+1. **Clone the repository**
+```bash
+git clone https://github.com/kaylipike/MandarinStudyTool.git
+cd MandarinStudyTool
+2. **Build the project**
+The project uses CMake for cross-platform compilation:
+mkdir build
+cd build
+cmake ..
+make
+3. **Run the program**
+./MandarinStudyTool
 
+Follow the on-screen prompts to select a study mode.
+Press Enter to reveal answers and translations.
+Note: Ensure the mandarin_vocab.txt file is in the working directory when running the program.
+
+---
+
+## Technical Details
+Language: C++
+Development Environment: CLion, macOS
+Key Concepts Demonstrated:
+  - Object-Oriented Programming (inheritance, polymorphism)
+  - Dynamic memory management (new/delete)
+  - File I/O and string parsing
+  - User input handling and interactive console applications
+
+---
+
+## Future Work
+  - Add flashcard shuffling and spaced repetition algorithms to improve learning efficiency.
+  - Include grammar-focused exercises and example sentences.
+  - Expand vocabulary datasets and support multiple textbooks or levels.
+  - Transition to a graphical user interface for enhanced usability.
+
+## Why This Project Matters
+This program demonstrates the ability to design and implement a practical, real-world tool using C++ fundamentals. It reflects careful object-oriented design for maintainability and scalability, practical data processing skills (parsing structured text files, and attention to user experience, even in a console-based program. This project is an excellent example of applying programming skills to solve educational challenges, making it both technically impressive and personally meaningful.
