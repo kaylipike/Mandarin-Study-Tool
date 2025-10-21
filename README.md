@@ -90,7 +90,8 @@ This program demonstrates the ability to design and implement a practical, real-
 ## Contact
 
 For questions, feedback, or collaboration inquiries, please contact:
-**Email:** [knpike@uvm.edu](mailto:knpike@uvm.edu)
+
+**Email:** [kayli.pike@gmail.com](mailto:kayli.pike@gmail.com)
 
 ---
 
